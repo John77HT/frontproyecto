@@ -12,8 +12,13 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
+                <th>Ciudad</th>
+                <th>Dirección</th>
+                <th>Tipo</th>
                 <th>Email</th>
                 <th>Teléfono</th>
+                <th>Género</th>
+                <th>Contraseña</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -23,8 +28,13 @@
                 <td>{{ usuario.id_usuario }}</td>
                 <td>{{ usuario.nombre }}</td>
                 <td>{{ usuario.apellido }}</td>
+                <td>{{ usuario.id_ciudad }}</td>
+                <td>{{ usuario.direccion }}</td>
+                <td>{{ usuario.id_tipo }}</td>
                 <td>{{ usuario.email }}</td>
                 <td>{{ usuario.telefono }}</td>
+                <td>{{ usuario.genero }}</td>
+                <td>{{ usuario.contra }}</td>
                 <td>
                     <button class="btn-editar" (click)="editarUsuario(usuario.id_usuario)">
                         <i class="fas fa-edit"></i> Editar
