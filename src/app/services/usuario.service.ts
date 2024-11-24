@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -21,8 +21,8 @@ export class UsuarioService {
   }
 
   // Crear un nuevo usuario
-  postUser(user: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, user);
+  postUser(usuario: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, usuario);
   }
 
   // Actualizar un usuario
