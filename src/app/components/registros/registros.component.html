@@ -12,8 +12,13 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
+                <th>Ciudad</th>
+                <th>Dirección</th>
+                <th>Tipo</th>
                 <th>Email</th>
                 <th>Teléfono</th>
+                <th>Género</th>
+                <th>Contraseña</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -23,8 +28,13 @@
                 <td>{{ usuario.id_usuario }}</td>
                 <td>{{ usuario.nombre }}</td>
                 <td>{{ usuario.apellido }}</td>
+                <td>{{ usuario.id_ciudad }}</td>
+                <td>{{ usuario.direccion }}</td>
+                <td>{{ usuario.id_tipo }}</td>
                 <td>{{ usuario.email }}</td>
                 <td>{{ usuario.telefono }}</td>
+                <td>{{ usuario.genero }}</td>
+                <td>{{ usuario.contra }}</td>
                 <td>
                     <button class="btn-editar" (click)="editarUsuario(usuario.id_usuario)">
                         <i class="fas fa-edit"></i> Editar
@@ -36,7 +46,7 @@
             </tr>
             <!-- Mostrar un mensaje si no hay usuarios -->
             <tr *ngIf="usuarios.length === 0">
-                <td colspan="6">No hay usuarios registrados.</td>
+                <td colspan="11">No hay usuarios registrados.</td>
             </tr>
         </tbody>
     </table>
