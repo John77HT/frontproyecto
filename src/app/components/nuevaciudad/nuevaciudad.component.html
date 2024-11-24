@@ -1,0 +1,38 @@
+<h2>Crear Nueva Ciudad</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<form (ngSubmit)="crearCiudad()" #ciudadForm="ngForm">
+  <!-- Campo ID Ciudad -->
+  <div class="form-group">
+    <label>ID Ciudad:</label>
+    <div class="input-group">
+      <i class="fas fa-id-card"></i>
+      <input 
+        [(ngModel)]="nuevaCiudad.id_ciudad" 
+        name="id_ciudad" 
+        placeholder="ID Ciudad" 
+        required>
+    </div>
+  </div>
+
+  <!-- Campo Nombre -->
+  <div class="form-group">
+    <label>Nombre:</label>
+    <div class="input-group">
+      <i class="fas fa-city"></i>
+      <input 
+        [(ngModel)]="nuevaCiudad.nombre" 
+        name="nombre" 
+        placeholder="Nombre de la Ciudad" 
+        required>
+    </div>
+  </div>
+
+  <!-- Botón para crear -->
+  <button type="submit" class="btn-crear">
+    <i class="fas fa-plus-circle"></i> Crear Ciudad
+  </button>
+
+  <!-- Mensaje de feedback -->
+  <p class="mensaje" *ngIf="mensaje">{{ mensaje }}</p>
+</form>

@@ -1,0 +1,146 @@
+/* Reset básico */
+body, h1, h2, h3, p, nav, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298, #000000, #ffffff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* Contenedor del encabezado principal */
+.title-header {
+    width: 100%;
+    background-color: #1e3c72;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+/* Estilo del título principal */
+.title-header h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0; /* Se eliminó el margen para asegurar un mejor alineamiento */
+    text-align: center;
+}
+
+/* Estilo del encabezado secundario */
+h2 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin: 10px 0;
+    color: hsl(0, 75%, 3%);
+}
+
+/* Estilo de la barra de navegación */
+nav {
+    background-color: rgba(0, 123, 255, 0.9);
+    padding: 10px 0;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 50px; /* Ajustar el margen superior para que esté debajo del encabezado */
+}
+
+/* Estilo de la lista */
+nav ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Estilo de los elementos de la lista */
+nav li {
+    margin: 0 15px;
+}
+
+/* Estilo de los enlaces */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+/* Efecto al pasar el ratón sobre los enlaces */
+nav a:hover {
+    background-color: rgba(0, 86, 179, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Efecto al pasar el ratón sobre el enlace activo */
+nav a:active {
+    background-color: rgba(0, 61, 122, 0.9);
+}
+
+/* Estilo de los iconos */
+nav i {
+    margin-right: 8px;
+}
+
+/* Contenedor principal para los componentes */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    width: 95%;
+    max-width: 1400px;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 100px; /* Ajustar el padding superior para evitar superposición con el encabezado */
+}
+
+/* Estilo de la imagen */
+.img-between-headers {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 10px 0; /* Reduce el espacio alrededor de la imagen */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #1e3c72; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 15px 0; /* Espaciado superior e inferior */
+    position: relative; /* Para un mejor posicionamiento */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+    bottom: 0; /* Fijo en la parte inferior */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
+}
+
+/* Estilo del texto del pie de página */
+.footer p {
+    margin: 0; /* Quita márgenes */
+    font-size: 14px; /* Tamaño de la fuente */
+}

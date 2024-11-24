@@ -1,0 +1,36 @@
+<h2>Lista de Ciudades</h2>
+<button class="btn-nuevo-registro" (click)="irANuevaCiudad()">
+    <i class="fas fa-plus"></i> Crear nueva Ciudad
+</button>
+
+<div class="tabla-container" *ngIf="ciudades.length > 0; else noCiudades">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ciudad of ciudades">
+                <td>{{ ciudad.id_ciudad }}</td>
+                <td>{{ ciudad.nombre }}</td>
+                <td>
+                    <button (click)="editarCiudad(ciudad.id_ciudad)">
+                        <i class="fas fa-edit"></i> Editar
+                    </button>
+                    <button (click)="eliminarCiudad(ciudad.id_ciudad)">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #noCiudades>
+    <p>No hay ciudades registradas.</p>
+</ng-template>
+
+<p class="mensaje" *ngIf="mensaje">{{ mensaje }}</p>

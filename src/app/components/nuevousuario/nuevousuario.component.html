@@ -1,0 +1,85 @@
+<h2>Crear Nuevo Usuario</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<form (ngSubmit)="crearUsuario()" #usuarioForm="ngForm">
+    <div class="form-group">
+        <label>ID Usuario:</label>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input [(ngModel)]="nuevoUsuario.id_usuario" name="id_usuario" placeholder="ID Usuario" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Nombre:</label>
+        <div class="input-group">
+            <i class="fas fa-user-circle"></i>
+            <input [(ngModel)]="nuevoUsuario.nombre" name="nombre" placeholder="Nombre" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Apellido:</label>
+        <div class="input-group">
+            <i class="fas fa-user-circle"></i>
+            <input [(ngModel)]="nuevoUsuario.apellido" name="apellido" placeholder="Apellido" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>ID Ciudad:</label>
+        <div class="input-group">
+            <i class="fas fa-map-marker-alt"></i>
+            <input [(ngModel)]="nuevoUsuario.id_ciudad" name="id_ciudad" placeholder="ID Ciudad" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Dirección:</label>
+        <div class="input-group">
+            <i class="fas fa-home"></i>
+            <input [(ngModel)]="nuevoUsuario.direccion" name="direccion" placeholder="Dirección" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>ID Tipo:</label>
+        <div class="input-group">
+            <i class="fas fa-tag"></i>
+            <input [(ngModel)]="nuevoUsuario.id_tipo" name="id_tipo" placeholder="ID Tipo" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Email:</label>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input [(ngModel)]="nuevoUsuario.email" name="email" placeholder="Email" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Teléfono:</label>
+        <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input [(ngModel)]="nuevoUsuario.telefono" name="telefono" placeholder="Teléfono" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Género:</label>
+        <div class="input-group">
+            <i class="fas fa-venus-mars"></i>
+            <input [(ngModel)]="nuevoUsuario.genero" name="genero" placeholder="Género" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Contraseña:</label>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" [(ngModel)]="nuevoUsuario.contra" name="contra" placeholder="Contraseña" required>
+        </div>
+    </div>
+
+    <button type="submit">Crear Usuario</button>
+</form>

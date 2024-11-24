@@ -1,0 +1,43 @@
+<h2>Lista de Usuarios</h2>
+
+<!-- Botón para crear un nuevo registro -->
+<button class="btn-nuevo-registro" (click)="irANuevoUsuario()">
+    <i class="fas fa-plus"></i> Crear nuevo registro
+</button>
+
+<div class="tabla-container">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iteración sobre los usuarios cargados dinámicamente -->
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{ usuario.id_usuario }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.apellido }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.telefono }}</td>
+                <td>
+                    <button class="btn-editar" (click)="editarUsuario(usuario.id_usuario)">
+                        <i class="fas fa-edit"></i> Editar
+                    </button>
+                    <button class="btn-eliminar" (click)="eliminarUsuario(usuario.id_usuario)">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </button>
+                </td>
+            </tr>
+            <!-- Mostrar un mensaje si no hay usuarios -->
+            <tr *ngIf="usuarios.length === 0">
+                <td colspan="6">No hay usuarios registrados.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

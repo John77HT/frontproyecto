@@ -1,0 +1,18 @@
+body {
+    background: linear-gradient(135deg, #3a8d8e, #6a4ca3);
+    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo del footer */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centrar texto en el footer */
+    padding: 10px 0; /* Espaciado interno */
+}

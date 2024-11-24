@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: hsl(225, 17%, 91%);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative; /* Para alinear los iconos dentro del in6put */
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.input-group i {
+    padding: 10px;
+    background-color: #4b6cb7;
+    color: white;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    flex-grow: 1; /* Permite que el input ocupe el espacio restante */
+    outline: none; /* Quitar el contorno al hacer clic */
+}
+
+input:focus {
+    border-color: #4b6cb7;
+    box-shadow: 0 0 5px rgba(75, 108, 183, 0.5);
+}
+
+button {
+    background-color: #28a745; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado del botón */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin-top: 20px; /* Margen superior para separar del formulario */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
